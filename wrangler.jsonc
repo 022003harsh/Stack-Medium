@@ -5,5 +5,7 @@
   "main": "./src/index.tsx",
   "assets": {
     "directory": "./dist"
-  }
+  },
+  "vars":{"DATABASE_URL":"prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiZDMwOTE0NWQtMWUyMC00ZDMyLTkyYjItNDY0ZmU4NzhjYmU4IiwidGVuYW50X2lkIjoiODI3OTE0OWM5ZjU3OTJmMGVkZWExOTIzMWY1YTlkMWI3MDMzM2VhZjM4ZDA1YzcxNjYzMWY1MWZkZjRhMWVkYyIsImludGVybmFsX3NlY3JldCI6IjA4NTMzOThhLWQzZDUtNDNhMC05OGI2LWQ0MjJjNTE4MDcyYyJ9.OjZJk03WpSHry88WRN5jacbzF8bQ570XukwSBv0cd3k",
+  "JWT_SECRET":"harshsecret"}
 }
