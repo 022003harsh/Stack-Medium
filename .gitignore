@@ -22,6 +22,7 @@ node_modules/
 .dev.vars
 
 wrangler.toml
+wrangler.jsonc
 
 # logs
 logs/
