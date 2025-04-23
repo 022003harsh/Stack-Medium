@@ -1,0 +1,31 @@
+# npm create hono@latest
+# npx prisma init
+# npm i prisma
+# npx prisma migrate dev --name init_schema
+# yarn install @prisma/client
+# yarn add @prisma/client
+# npx prisma generate --no-engine
+# yarn add @prisma/extension-accelerate
+# after making the full code
+# npx wrangler login
+# npx wrangler whoami
+# if not build to make dist folder(yarn build)
+# npm run deploy or wrangler deploy
+# https://stack-medium.harshku2222.workers.dev/api/v1/blog/bulk
+# 100k request in a day is free in this serverless backend HONO cloudflare
+
+
+
+
+# make wrangler.jsonc file after clone
+# {
+#     "$schema": "node_modules/wrangler/config-schema.json",
+#     "name": "stack-medium",
+#     "compatibility_date": "2024-04-01",
+#     "main": "./src/index.tsx",
+#     "assets": {
+#       "directory": "./dist"
+#     },
+#     "vars":{"DATABASE_URL":"prisma_Accelerate_db_link",
+#     "JWT_SECRET":"My-Secret_key like harsh"}
+#   }
