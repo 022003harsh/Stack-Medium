@@ -3,21 +3,22 @@ import { PrismaClient } from "@prisma/client/edge";
 import { withAccelerate } from "@prisma/extension-accelerate";
 import { decode, sign, verify } from "hono/jwt";
 import { env } from "hono/adapter";
-
-
+import { signUpInput, signInInput } from "@tech_slayer/stack-medium-common";
 
 export const userRouter = new Hono<{
-    Bindings: {
-      DATABASE_URL: string;
-      JWT_SECRET: string;
-    };
-  }>();
-
-
+  Bindings: {
+    DATABASE_URL: string;
+    JWT_SECRET: string;
+  };
+}>();
 
 userRouter.post("/signup", async (c) => {
   const body = await c.req.json();
-  console.log("Request Body:", body);
+  const { success } = signUpInput.safeParse(body);
+  if (!success) {
+    c.status(411);
+    return c.json({ error: "Invalid inputs in signup" });
+  }
 
   // The bellow line is to be used in every route as it is or either we can make the middleware of it and reuse it in every route because we cannot put it in the root directory
   const prisma = new PrismaClient({
@@ -51,7 +52,11 @@ userRouter.post("/signup", async (c) => {
 
 userRouter.post("/signin", async (c) => {
   const body = await c.req.json();
-  console.log("Request Body:", body);
+  const {success} = signInInput.safeParse(body);
+  if (!success) {
+    c.status(411);
+    return c.json({ error: "Invalid inputs in signin" });
+  }
 
   // The bellow line is to be used in every route as it is or either we can make the middleware of it and reuse it in every route because we cannot put it in the root directory
   const prisma = new PrismaClient({

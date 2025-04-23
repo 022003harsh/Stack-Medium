@@ -192,6 +192,13 @@
   resolved "https://registry.npmjs.org/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.40.0.tgz"
   integrity sha512-lpPE1cLfP5oPzVjKMx10pgBmKELQnFJXHgvtHCtuJWOv8MxqdEIMNtgHgBFf7Ea2/7EuVwa9fodWUfXAlXZLZQ==
 
+"@tech_slayer/stack-medium-common@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@tech_slayer/stack-medium-common/-/stack-medium-common-1.0.0.tgz"
+  integrity sha512-4Bs42VYFRIB6zJpHUDmGx9RdsHn0KNc+58Pzq9UpgeB+v3pQ0JWBm70E2sQN6H/Ywj+Z5C21W+5e/ggNxBs07Q==
+  dependencies:
+    zod "^3.24.3"
+
 "@types/estree@1.0.7":
   version "1.0.7"
   resolved "https://registry.npmjs.org/@types/estree/-/estree-1.0.7.tgz"
@@ -777,6 +784,11 @@ youch@3.3.4:
     cookie "^0.7.1"
     mustache "^4.2.0"
     stacktracey "^2.1.8"
+
+zod@^3.24.3:
+  version "3.24.3"
+  resolved "https://registry.npmjs.org/zod/-/zod-3.24.3.tgz"
+  integrity sha512-HhY1oqzWCQWuUqvBFnsyrtZRhyPeR7SUGv+C4+MsisMuVfSPx8HpwWqH8tRahSlt6M3PiFAcoeFhZAqIXTxoSg==
 
 zod@3.22.3:
   version "3.22.3"
